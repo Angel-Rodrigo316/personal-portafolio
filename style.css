@@ -1,0 +1,59 @@
+body{
+    font-family: 'Inter', sans-serif;
+    margin: auto;
+    padding: 0;
+    line-height: 1.6;
+    max-width: 1000px;
+}
+
+header {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #ececec, #d9d9d9);
+}
+
+section{
+    padding: 40px 20px;
+}
+
+.project-card{
+    background: #eaeaea;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.dark{
+    background: #121212;
+    color: white;
+}
+
+.dark header{
+    background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
+}
+
+.dark .project-card {
+    background: #1e1e1e;
+}
+
+.dark .contact-btn {
+    background: white;
+    color: black;
+}
+
+
+.contact-btn {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    padding: 10px 18px;
+    background: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.contact-btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
