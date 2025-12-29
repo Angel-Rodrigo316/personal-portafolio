@@ -194,6 +194,7 @@ section{
   inset: 0;
   height: 100%;
   transform: translateX(-100%);
+  pointer-events: none;
 }
 
 .theme__icon,
