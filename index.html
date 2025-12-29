@@ -12,20 +12,45 @@
             Hola, soy Angel Rodrigo
         </h1>
         <p>Estudiante de ITC en el Tecnológico de Monterrey. Me gusta la creatividad y la tecnología</p>
-        <button id="themeBtn">Cambiar temas</button>
+        <!-- Theme toggle -->
+        <label for="theme" class="theme">
+        <span class="theme__toggle-wrap">
+            <input 
+            id="themeToggle"
+            class="theme__toggle"
+            type="checkbox"
+            role="switch"
+            aria-label="Cambiar tema"
+            >
+            <span class="theme__fill"></span>
+            <span class="theme__icon">
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            <span class="theme__icon-part"></span>
+            </span>
+        </span>
+        </label>
+
     </header>
 
     <section id="about">
-        <h2>Sobre mi</h2>
+        <h2>Sobre mí</h2>
         <p>Soy estudiante de Ingeniería en Tecnologías Computacionales en el Tecnológico de Monterrey, con interés en el desarrollo web y la creación de experiencias visuales e interactivas. Me motiva combinar tecnología, creatividad y diseño para construir soluciones funcionales y atractivas.</p>
     </section>
 
     <section id="projects">
         <h2>Proyectos</h2>
         <div class="projects-container">
-            <div class="project-card">Página personal (este sitio)</div>
-            <div class="project-card" data-project="bluefin">App web "Bluefin"</div>
-            <div class="project-card" data-project="beyond">App web "BEYOND"</div>
+            <div class="project-card" data-project="portafolio">Mi página personal (Este sitio)</div>
+            <div class="project-card" data-project="bluefin">Bluefin</div>
+            <div class="project-card" data-project="beyond">Beyond</div>
+
         </div>
     </section>
 
@@ -44,6 +69,18 @@
             Teléfono
         </a>
     </section>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+
+            <a id="modalLink" href="#" target="_blank" class="modal-link hidden">
+                Ver proyecto
+            </a>
+        </div>
+    </div>
 
     <script src="script.js"></script>
     
