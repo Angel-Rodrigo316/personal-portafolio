@@ -476,7 +476,8 @@ p {
     min-width: 240px;
     height: 150px;
     transform: none !important;
-    opacity: 1;
+    opacity: 1 !important;
+    filter: none !important;
     scroll-snap-align: center;
     flex-shrink: 0;
   }
