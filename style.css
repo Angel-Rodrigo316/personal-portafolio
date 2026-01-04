@@ -451,7 +451,7 @@ p {
   color: #fff;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 768px) {
   /* Contenedor */
   .carousel-3d {
     padding-bottom: 10px;
