@@ -80,3 +80,46 @@ modal.addEventListener("click", (e) => {
     modal.classList.add("hidden");
   }
 });
+
+/* =========================
+   CARRUSEL 3D PROYECTOS
+========================= */
+
+const track = document.querySelector(".carousel-track");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+
+if (track) {
+  const cards3D = track.querySelectorAll(".project-card");
+  let index = 0;
+  const total = cards3D.length;
+  const radius = 320;
+  const angleStep = 360 / total;
+
+  function updateCarousel() {
+  cards3D.forEach((card, i) => {
+    const angle = angleStep * (i - index);
+    card.style.transform = `
+      rotateY(${angle}deg)
+      translateZ(${radius}px)
+    `;
+
+    // índice normalizado solo para destacar
+    const normalizedIndex = ((index % total) + total) % total;
+    card.style.opacity = i === normalizedIndex ? "1" : "0.6";
+  });
+}
+
+  nextBtn?.addEventListener("click", () => {
+    index++;
+    updateCarousel();
+  });
+
+  prevBtn?.addEventListener("click", () => {
+    index--; 
+    updateCarousel();
+  });
+
+  updateCarousel();
+}
+

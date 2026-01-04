@@ -16,44 +16,13 @@ section{
     padding: 40px 20px;
 }
 
-.project-card{
-    background: #eaeaea;
-    padding: 20px;
-    border-radius: 12px;
-    margin-top: 15px;
-    cursor: pointer;
-    opacity: 0;
-    animation: fadeInUp 0.6s ease forwards;
 
-    transition: 
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background 0.3s ease;
-
-}
-
-
-
-.project-card:nth-child(1) { animation-delay: 0.1s; }
-.project-card:nth-child(2) { animation-delay: 0.25s; }
-.project-card:nth-child(3) { animation-delay: 0.4s; }
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 .project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-    background: #ffffff;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+  background: #ffffff;
 }
+
 
 .dark{
     background: #121212;
@@ -383,24 +352,6 @@ section{
 }
 /*AQUI ACABA EL BOTON*/
 
-.projects-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-
-@media (min-width: 768px) {
-    .projects-container {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .project-card {
-        flex: 1;
-        max-width: 300px;
-    }
-}
 
 @media (max-width: 480px) {
     .theme {
@@ -426,4 +377,72 @@ p {
     header {
         padding: 30px 15px;
     }
+}
+
+/*Carrusel*/
+
+.carousel-3d {
+  position: relative;
+  perspective: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.carousel-track {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+.project-card {
+  position: absolute;
+  width: 280px;
+  height: 160px;
+  opacity: 0.5;
+  transform-style: preserve-3d;
+
+  background: #eaeaea;
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.8s ease,
+    opacity 0.8s ease,
+    background 0.3s ease;
+}
+
+.nav.prev {
+  position: absolute;
+  left: -50px;
+}
+
+.nav.next {
+  position: absolute;
+  right: -50px;
+}
+
+.nav {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.1);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark .nav {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
 }
