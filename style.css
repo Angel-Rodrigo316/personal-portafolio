@@ -1,9 +1,13 @@
-body{
-    font-family: 'Inter', sans-serif;
-    margin: 0 auto;
-    padding: 0 10px;
-    line-height: 1.6;
-    max-width: 1000px;
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 header {
@@ -448,23 +452,38 @@ p {
 }
 
 @media (max-width: 600px) {
+  /* Contenedor */
   .carousel-3d {
-    padding: 0 40px; /* espacio interno */
+    padding-bottom: 10px;
   }
 
-  .nav.prev {
-    left: 5px;
+  /* Track pasa a scroll horizontal */
+  .carousel-track {
+    transform: none !important;
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 10px 5px;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
   }
 
-  .nav.next {
-    right: 5px;
+  /* Cards normales (no 3D) */
+  .project-card {
+    position: relative;
+    min-width: 240px;
+    height: 150px;
+    transform: none !important;
+    opacity: 1;
+    scroll-snap-align: center;
+    flex-shrink: 0;
   }
 
+  /* OCULTAR BOTONES EN MÓVIL */
   .nav {
-    top: 50%;
-    transform: translateY(-50%);
-    width: 44px;
-    height: 44px;
-    font-size: 18px;
+    display: none;
   }
 }
+
