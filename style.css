@@ -383,108 +383,61 @@ p {
     }
 }
 
-/*Carrusel*/
+ 
 
-.carousel-3d {
-  position: relative;
-  perspective: 1000px;
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 12px 20px;
+}
+
+.dark .navbar {
+  background: rgba(18, 18, 18, 0.85);
+}
+
+.nav-links {
+  list-style: none;
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 20px;
-  width: 100%;
+  padding: 0;
+  margin: 0;
+  justify-content: flex-start; /* 👈 alineado a la izquierda */
 }
 
-.carousel-track {
-  width: 300px;
-  height: 200px;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.8s ease;
-}
-
-.project-card {
-  position: absolute;
-  width: 280px;
-  height: 160px;
-  opacity: 0.5;
-  transform-style: preserve-3d;
-
-  background: #eaeaea;
-  border-radius: 16px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
-
-  transition:
-    transform 0.8s ease,
-    opacity 0.8s ease,
-    background 0.3s ease;
-}
-
-.nav.prev {
-  position: absolute;
-  left: -50px;
-}
-
-.nav.next {
-  position: absolute;
-  right: -50px;
-}
-
-.nav {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.1);
+.nav-links a {
+  text-decoration: none;
+  font-weight: 500;
   color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
 }
 
-.dark .nav {
-  background: rgba(255,255,255,0.15);
+.dark .nav-links a {
   color: #fff;
 }
 
-@media (max-width: 768px) {
-  /* Contenedor */
-  .carousel-3d {
-    padding-bottom: 10px;
-  }
-
-  /* Track pasa a scroll horizontal */
-  .carousel-track {
-    transform: none !important;
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 10px 5px;
-    width: 100%;
-    -webkit-overflow-scrolling: touch;
-    touch-action: pan-x;
-  }
-
-  /* Cards normales (no 3D) */
-  .project-card {
-    position: relative;
-    min-width: 240px;
-    height: 150px;
-    transform: none !important;
-    opacity: 1 !important;
-    filter: none !important;
-    scroll-snap-align: center;
-    flex-shrink: 0;
-  }
-
-  /* OCULTAR BOTONES EN MÓVIL */
-  .nav {
-    display: none;
-  }
+/* efecto underline elegante */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s ease;
 }
 
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}

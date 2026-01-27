@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angel | Projects</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Theme toggle -->
+<label class="theme">
+  <span class="theme__toggle-wrap">
+    <input 
+      id="themeToggle"
+      class="theme__toggle"
+      type="checkbox"
+      role="switch"
+      aria-label="Cambiar tema"
+    >
+    <span class="theme__fill"></span>
+    <span class="theme__icon">
+      <span class="theme__icon-part"></span>
+      <span class="theme__icon-part"></span>
+      <span class="theme__icon-part"></span>
+      <span class="theme__icon-part"></span>
+      <span class="theme__icon-part"></span>
+      <span class="theme__icon-part"></span>
+      <span class="theme__icon-part"></span>
+      <span class="theme__icon-part"></span>
+      <span class="theme__icon-part"></span>
+    </span>
+  </span>
+</label>
+
+<main>
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="carousel-3d">
+    <button class="nav prev">‹</button>
+
+    <div class="carousel-track">
+      <div class="project-card" data-project="portafolio">Personal portfolio</div>
+      <div class="project-card" data-project="bluefin">Bluefin</div>
+      <div class="project-card" data-project="beyond">Beyond</div>
+    </div>
+
+    <button class="nav next">›</button>
+  </div>
+</section>
+</main>
+
+<!-- Modal -->
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDescription"></p>
+    <a id="modalLink" href="#" target="_blank" class="modal-link hidden">
+      View project
+    </a>
+  </div>
+</div>
+
+<!-- JS -->
+<script src="script.js"></script>
+<script src="projects.js"></script>
+
+</body>
+</html>
