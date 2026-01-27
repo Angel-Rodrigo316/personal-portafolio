@@ -10,17 +10,26 @@
 <nav class="navbar">
   <ul class="nav-links">
     <li><a href="#">Home</a></li>
-    <li><a href="#about">About</a></li>
+    <li><a href="about.html">About</a></li>
     <li><a href="projects.html">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
     <header>
-        <h1>
-            Hi!, I'm Angel Rodrigo
-        </h1>
-        <p> ITC student at Tecnológico de Monterrey who loves combining creativity with technology</p>
+         <!-- TEXTO -->
+  <div class="hero-text">
+    <h1>Hi, I'm Angel Rodrigo</h1>
+    <p>
+      ITC student at Tecnológico de Monterrey who enjoys combining
+      creativity, design and technology to build interactive experiences.
+    </p>
+  </div>
+
+  <!-- IMAGEN -->
+  <div class="hero-image">
+    <img src="img/photo.png" alt="Angel Rodrigo">
+  </div>
         <!-- Theme toggle -->
         <label for="theme" class="theme">
         <span class="theme__toggle-wrap">
@@ -50,11 +59,6 @@
 
     <main>
 
-    <section id="about">
-        <h2>About me</h2>
-        <p>I am a Computer Technologies Engineering student at Tecnológico de Monterrey, with an interest in web development and the creation of visual and interactive experiences. I am motivated by combining technology, creativity, and design to build functional and engaging solutions.</p>
-    </section>
-
     <section id="contact">
         <h2>Contact</h2>
 
@@ -72,17 +76,6 @@
     </section>
     </main>
 
-    <div id="modal" class="modal hidden">
-        <div class="modal-content">
-            <span id="closeModal" class="close">&times;</span>
-            <h3 id="modalTitle"></h3>
-            <p id="modalDescription"></p>
-
-            <a id="modalLink" href="#" target="_blank" class="modal-link hidden">
-                View project
-            </a>
-        </div>
-    </div>
 
     <script src="script.js"></script>
     

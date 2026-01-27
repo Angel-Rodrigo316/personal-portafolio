@@ -408,7 +408,7 @@ p {
   gap: 20px;
   padding: 0;
   margin: 0;
-  justify-content: flex-start; /* 👈 alineado a la izquierda */
+  justify-content: flex-start; /* alineado a la izquierda */
 }
 
 .nav-links a {
@@ -422,7 +422,6 @@ p {
   color: #fff;
 }
 
-/* efecto underline elegante */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -440,4 +439,17 @@ p {
 
 html {
   scroll-behavior: smooth;
+}
+
+.about-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.about-page p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+  font-size: 1.05rem;
 }
